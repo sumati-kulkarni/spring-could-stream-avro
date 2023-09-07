@@ -1,0 +1,1 @@
+# spring-could-stream-avro
