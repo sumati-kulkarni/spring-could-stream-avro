@@ -14,7 +14,7 @@
   "transforms.extractInt.field": "ID",
   "connection.url": "jdbc:oracle:thin:@192.168.4.81:1521:orcl1",
   "connection.user": "kafkauser",
-  "connection.password": "tiger",
+  "connection.password": "********",
   "connection.attempts": "10",
   "table.whitelist": "EMPLOYEE, DEPARTMENT",
   "numeric.mapping": "best_fit",
