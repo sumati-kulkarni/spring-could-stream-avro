@@ -1,0 +1,66 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    stream:
+      function:
+        definition: enrichEmployee
+      bindings:
+        enrichEmployee-in-0:
+          destination: avro_EMPLOYEE
+          contentType: application/*+avro
+          consumer:
+            use-native-decoding: false
+        enrichEmployee-in-1:
+          destination: avro_DEPARTMENT
+          contentType: application/*+avro
+          consumer:
+            use-native-decoding: false
+        enrichEmployee-out-0:
+          destination: avro_RESULT
+          contentType: application/*+avro
+          producer:
+            use-native-encoding: true
+      kafka:
+        streams:
+          binder:
+            brokers:
+              - localhost:9092
+            functions:
+              enrichEmployee.applicationId: 175594_appid
+            configuration:
+              specific.avro.reader: true
+              default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+              default.value.serde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
+              state.dir: state-store
+              acceptable.recovery.lag: 0
+              schema.registry.url: http://localhost:8081
+          bindings:
+            enrichEmployee-in-0:
+              consumer:
+                keySerde: org.apache.kafka.common.serialization.Serdes$StringSerde
+                valueSerde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
+                configuration:
+                  specific.avro.reader: true
+            enrichEmployee-in-1:
+              consumer:
+                keySerde: org.apache.kafka.common.serialization.Serdes$StringSerde
+                valueSerde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
+                configuration:
+                  specific.avro.reader: true
+            enrichEmployee-out-0:
+              producer:
+                keySerde: org.apache.kafka.common.serialization.Serdes$StringSerde
+                valueSerde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
+                configuration:
+                  specific.avro.reader: true
+                useNativeEncoding: true
+        binder:
+          configuration:
+            heartbeat.interval.ms: 10000
+            max.poll.records: 5000
+
+
+#logging:
+#  level:
+#    root: DEBUG

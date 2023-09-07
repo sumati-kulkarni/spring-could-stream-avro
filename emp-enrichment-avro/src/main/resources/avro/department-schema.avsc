@@ -1,0 +1,42 @@
+{
+  "connect.name": "DEPARTMENT",
+  "namespace": "com.citi.schema",
+  "fields": [
+    {
+      "name": "ID",
+      "type": "string"
+    },
+    {
+      "name": "KID",
+      "type": "long"
+    },
+    {
+      "default": null,
+      "name": "DNAME",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "CREATED_DATE",
+      "type": {
+        "connect.name": "org.apache.kafka.connect.data.Timestamp",
+        "connect.version": 1,
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "MODIFIED_DATE",
+      "type": {
+        "connect.name": "org.apache.kafka.connect.data.Timestamp",
+        "connect.version": 1,
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    }
+  ],
+  "name": "Department",
+  "type": "record"
+}
