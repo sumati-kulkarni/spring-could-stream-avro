@@ -13,11 +13,11 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class Employee extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -9146353590120120525L;
+public class EMPLOYEE extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = 5083024965525792456L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Employee\",\"namespace\":\"com.citi.schema\",\"fields\":[{\"name\":\"ID\",\"type\":\"string\"},{\"name\":\"KID\",\"type\":\"long\"},{\"name\":\"DEPTID\",\"type\":\"string\"},{\"name\":\"ENAME\",\"type\":\"string\"},{\"name\":\"CREATED_DATE\",\"type\":{\"type\":\"long\",\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"connect.version\":1,\"logicalType\":\"timestamp-millis\"}},{\"name\":\"MODIFIED_DATE\",\"type\":{\"type\":\"long\",\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"connect.version\":1,\"logicalType\":\"timestamp-millis\"}}],\"connect.name\":\"EMPLOYEE\"}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"EMPLOYEE\",\"namespace\":\"com.citi.schema\",\"fields\":[{\"name\":\"ID\",\"type\":\"string\"},{\"name\":\"KID\",\"type\":\"long\"},{\"name\":\"DEPTID\",\"type\":\"string\"},{\"name\":\"ENAME\",\"type\":\"string\"},{\"name\":\"CREATED_DATE\",\"type\":{\"type\":\"long\",\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"connect.version\":1,\"logicalType\":\"timestamp-millis\"}},{\"name\":\"MODIFIED_DATE\",\"type\":{\"type\":\"long\",\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"connect.version\":1,\"logicalType\":\"timestamp-millis\"}}],\"connect.name\":\"EMPLOYEE\"}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
@@ -25,17 +25,17 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
   }
 
-  private static final BinaryMessageEncoder<Employee> ENCODER =
+  private static final BinaryMessageEncoder<EMPLOYEE> ENCODER =
       new BinaryMessageEncoder<>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<Employee> DECODER =
+  private static final BinaryMessageDecoder<EMPLOYEE> DECODER =
       new BinaryMessageDecoder<>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
    * @return the message encoder used by this class
    */
-  public static BinaryMessageEncoder<Employee> getEncoder() {
+  public static BinaryMessageEncoder<EMPLOYEE> getEncoder() {
     return ENCODER;
   }
 
@@ -43,7 +43,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
    * Return the BinaryMessageDecoder instance used by this class.
    * @return the message decoder used by this class
    */
-  public static BinaryMessageDecoder<Employee> getDecoder() {
+  public static BinaryMessageDecoder<EMPLOYEE> getDecoder() {
     return DECODER;
   }
 
@@ -52,12 +52,12 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
-  public static BinaryMessageDecoder<Employee> createDecoder(SchemaStore resolver) {
+  public static BinaryMessageDecoder<EMPLOYEE> createDecoder(SchemaStore resolver) {
     return new BinaryMessageDecoder<>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
-   * Serializes this Employee to a ByteBuffer.
+   * Serializes this EMPLOYEE to a ByteBuffer.
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -66,12 +66,12 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   /**
-   * Deserializes a Employee from a ByteBuffer.
+   * Deserializes a EMPLOYEE from a ByteBuffer.
    * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a Employee instance decoded from the given buffer
+   * @return a EMPLOYEE instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
-  public static Employee fromByteBuffer(
+  public static EMPLOYEE fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
@@ -88,7 +88,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public Employee() {}
+  public EMPLOYEE() {}
 
   /**
    * All-args constructor.
@@ -99,7 +99,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
    * @param CREATED_DATE The new value for CREATED_DATE
    * @param MODIFIED_DATE The new value for MODIFIED_DATE
    */
-  public Employee(java.lang.CharSequence ID, java.lang.Long KID, java.lang.CharSequence DEPTID, java.lang.CharSequence ENAME, java.time.Instant CREATED_DATE, java.time.Instant MODIFIED_DATE) {
+  public EMPLOYEE(java.lang.CharSequence ID, java.lang.Long KID, java.lang.CharSequence DEPTID, java.lang.CharSequence ENAME, java.time.Instant CREATED_DATE, java.time.Instant MODIFIED_DATE) {
     this.ID = ID;
     this.KID = KID;
     this.DEPTID = DEPTID;
@@ -262,45 +262,45 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   /**
-   * Creates a new Employee RecordBuilder.
-   * @return A new Employee RecordBuilder
+   * Creates a new EMPLOYEE RecordBuilder.
+   * @return A new EMPLOYEE RecordBuilder
    */
-  public static com.citi.schema.Employee.Builder newBuilder() {
-    return new com.citi.schema.Employee.Builder();
+  public static com.citi.schema.EMPLOYEE.Builder newBuilder() {
+    return new com.citi.schema.EMPLOYEE.Builder();
   }
 
   /**
-   * Creates a new Employee RecordBuilder by copying an existing Builder.
+   * Creates a new EMPLOYEE RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new Employee RecordBuilder
+   * @return A new EMPLOYEE RecordBuilder
    */
-  public static com.citi.schema.Employee.Builder newBuilder(com.citi.schema.Employee.Builder other) {
+  public static com.citi.schema.EMPLOYEE.Builder newBuilder(com.citi.schema.EMPLOYEE.Builder other) {
     if (other == null) {
-      return new com.citi.schema.Employee.Builder();
+      return new com.citi.schema.EMPLOYEE.Builder();
     } else {
-      return new com.citi.schema.Employee.Builder(other);
+      return new com.citi.schema.EMPLOYEE.Builder(other);
     }
   }
 
   /**
-   * Creates a new Employee RecordBuilder by copying an existing Employee instance.
+   * Creates a new EMPLOYEE RecordBuilder by copying an existing EMPLOYEE instance.
    * @param other The existing instance to copy.
-   * @return A new Employee RecordBuilder
+   * @return A new EMPLOYEE RecordBuilder
    */
-  public static com.citi.schema.Employee.Builder newBuilder(com.citi.schema.Employee other) {
+  public static com.citi.schema.EMPLOYEE.Builder newBuilder(com.citi.schema.EMPLOYEE other) {
     if (other == null) {
-      return new com.citi.schema.Employee.Builder();
+      return new com.citi.schema.EMPLOYEE.Builder();
     } else {
-      return new com.citi.schema.Employee.Builder(other);
+      return new com.citi.schema.EMPLOYEE.Builder(other);
     }
   }
 
   /**
-   * RecordBuilder for Employee instances.
+   * RecordBuilder for EMPLOYEE instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Employee>
-    implements org.apache.avro.data.RecordBuilder<Employee> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<EMPLOYEE>
+    implements org.apache.avro.data.RecordBuilder<EMPLOYEE> {
 
     private java.lang.CharSequence ID;
     private long KID;
@@ -318,7 +318,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.citi.schema.Employee.Builder other) {
+    private Builder(com.citi.schema.EMPLOYEE.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.ID)) {
         this.ID = data().deepCopy(fields()[0].schema(), other.ID);
@@ -347,10 +347,10 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
     }
 
     /**
-     * Creates a Builder by copying an existing Employee instance
+     * Creates a Builder by copying an existing EMPLOYEE instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.citi.schema.Employee other) {
+    private Builder(com.citi.schema.EMPLOYEE other) {
       super(SCHEMA$, MODEL$);
       if (isValidValue(fields()[0], other.ID)) {
         this.ID = data().deepCopy(fields()[0].schema(), other.ID);
@@ -392,7 +392,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'ID'.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder setID(java.lang.CharSequence value) {
+    public com.citi.schema.EMPLOYEE.Builder setID(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.ID = value;
       fieldSetFlags()[0] = true;
@@ -412,7 +412,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'ID' field.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder clearID() {
+    public com.citi.schema.EMPLOYEE.Builder clearID() {
       ID = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -432,7 +432,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'KID'.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder setKID(long value) {
+    public com.citi.schema.EMPLOYEE.Builder setKID(long value) {
       validate(fields()[1], value);
       this.KID = value;
       fieldSetFlags()[1] = true;
@@ -452,7 +452,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'KID' field.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder clearKID() {
+    public com.citi.schema.EMPLOYEE.Builder clearKID() {
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -471,7 +471,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'DEPTID'.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder setDEPTID(java.lang.CharSequence value) {
+    public com.citi.schema.EMPLOYEE.Builder setDEPTID(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.DEPTID = value;
       fieldSetFlags()[2] = true;
@@ -491,7 +491,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'DEPTID' field.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder clearDEPTID() {
+    public com.citi.schema.EMPLOYEE.Builder clearDEPTID() {
       DEPTID = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -511,7 +511,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'ENAME'.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder setENAME(java.lang.CharSequence value) {
+    public com.citi.schema.EMPLOYEE.Builder setENAME(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.ENAME = value;
       fieldSetFlags()[3] = true;
@@ -531,7 +531,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'ENAME' field.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder clearENAME() {
+    public com.citi.schema.EMPLOYEE.Builder clearENAME() {
       ENAME = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -551,7 +551,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'CREATED_DATE'.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder setCREATEDDATE(java.time.Instant value) {
+    public com.citi.schema.EMPLOYEE.Builder setCREATEDDATE(java.time.Instant value) {
       validate(fields()[4], value);
       this.CREATED_DATE = value.truncatedTo(java.time.temporal.ChronoUnit.MILLIS);
       fieldSetFlags()[4] = true;
@@ -571,7 +571,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'CREATED_DATE' field.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder clearCREATEDDATE() {
+    public com.citi.schema.EMPLOYEE.Builder clearCREATEDDATE() {
       fieldSetFlags()[4] = false;
       return this;
     }
@@ -590,7 +590,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'MODIFIED_DATE'.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder setMODIFIEDDATE(java.time.Instant value) {
+    public com.citi.schema.EMPLOYEE.Builder setMODIFIEDDATE(java.time.Instant value) {
       validate(fields()[5], value);
       this.MODIFIED_DATE = value.truncatedTo(java.time.temporal.ChronoUnit.MILLIS);
       fieldSetFlags()[5] = true;
@@ -610,16 +610,16 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'MODIFIED_DATE' field.
       * @return This builder.
       */
-    public com.citi.schema.Employee.Builder clearMODIFIEDDATE() {
+    public com.citi.schema.EMPLOYEE.Builder clearMODIFIEDDATE() {
       fieldSetFlags()[5] = false;
       return this;
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public Employee build() {
+    public EMPLOYEE build() {
       try {
-        Employee record = new Employee();
+        EMPLOYEE record = new EMPLOYEE();
         record.ID = fieldSetFlags()[0] ? this.ID : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.KID = fieldSetFlags()[1] ? this.KID : (java.lang.Long) defaultValue(fields()[1]);
         record.DEPTID = fieldSetFlags()[2] ? this.DEPTID : (java.lang.CharSequence) defaultValue(fields()[2]);
@@ -636,8 +636,8 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<Employee>
-    WRITER$ = (org.apache.avro.io.DatumWriter<Employee>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<EMPLOYEE>
+    WRITER$ = (org.apache.avro.io.DatumWriter<EMPLOYEE>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -645,8 +645,8 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<Employee>
-    READER$ = (org.apache.avro.io.DatumReader<Employee>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<EMPLOYEE>
+    READER$ = (org.apache.avro.io.DatumReader<EMPLOYEE>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {

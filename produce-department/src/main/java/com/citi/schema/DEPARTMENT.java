@@ -13,11 +13,11 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class Department extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6396487648729429940L;
+public class DEPARTMENT extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = 2556838011804230524L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Department\",\"namespace\":\"com.citi.schema\",\"fields\":[{\"name\":\"ID\",\"type\":\"string\"},{\"name\":\"KID\",\"type\":\"long\"},{\"name\":\"DNAME\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"CREATED_DATE\",\"type\":{\"type\":\"long\",\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"connect.version\":1,\"logicalType\":\"timestamp-millis\"}},{\"name\":\"MODIFIED_DATE\",\"type\":{\"type\":\"long\",\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"connect.version\":1,\"logicalType\":\"timestamp-millis\"}}],\"connect.name\":\"DEPARTMENT\"}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DEPARTMENT\",\"namespace\":\"com.citi.schema\",\"fields\":[{\"name\":\"ID\",\"type\":\"string\"},{\"name\":\"KID\",\"type\":\"long\"},{\"name\":\"DNAME\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"CREATED_DATE\",\"type\":{\"type\":\"long\",\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"connect.version\":1,\"logicalType\":\"timestamp-millis\"}},{\"name\":\"MODIFIED_DATE\",\"type\":{\"type\":\"long\",\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"connect.version\":1,\"logicalType\":\"timestamp-millis\"}}],\"connect.name\":\"DEPARTMENT\"}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
@@ -25,17 +25,17 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
     MODEL$.addLogicalTypeConversion(new org.apache.avro.data.TimeConversions.TimestampMillisConversion());
   }
 
-  private static final BinaryMessageEncoder<Department> ENCODER =
+  private static final BinaryMessageEncoder<DEPARTMENT> ENCODER =
       new BinaryMessageEncoder<>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<Department> DECODER =
+  private static final BinaryMessageDecoder<DEPARTMENT> DECODER =
       new BinaryMessageDecoder<>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
    * @return the message encoder used by this class
    */
-  public static BinaryMessageEncoder<Department> getEncoder() {
+  public static BinaryMessageEncoder<DEPARTMENT> getEncoder() {
     return ENCODER;
   }
 
@@ -43,7 +43,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
    * Return the BinaryMessageDecoder instance used by this class.
    * @return the message decoder used by this class
    */
-  public static BinaryMessageDecoder<Department> getDecoder() {
+  public static BinaryMessageDecoder<DEPARTMENT> getDecoder() {
     return DECODER;
   }
 
@@ -52,12 +52,12 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
-  public static BinaryMessageDecoder<Department> createDecoder(SchemaStore resolver) {
+  public static BinaryMessageDecoder<DEPARTMENT> createDecoder(SchemaStore resolver) {
     return new BinaryMessageDecoder<>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
-   * Serializes this Department to a ByteBuffer.
+   * Serializes this DEPARTMENT to a ByteBuffer.
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -66,12 +66,12 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
   }
 
   /**
-   * Deserializes a Department from a ByteBuffer.
+   * Deserializes a DEPARTMENT from a ByteBuffer.
    * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a Department instance decoded from the given buffer
+   * @return a DEPARTMENT instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
-  public static Department fromByteBuffer(
+  public static DEPARTMENT fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
@@ -87,7 +87,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public Department() {}
+  public DEPARTMENT() {}
 
   /**
    * All-args constructor.
@@ -97,7 +97,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
    * @param CREATED_DATE The new value for CREATED_DATE
    * @param MODIFIED_DATE The new value for MODIFIED_DATE
    */
-  public Department(java.lang.CharSequence ID, java.lang.Long KID, java.lang.CharSequence DNAME, java.time.Instant CREATED_DATE, java.time.Instant MODIFIED_DATE) {
+  public DEPARTMENT(java.lang.CharSequence ID, java.lang.Long KID, java.lang.CharSequence DNAME, java.time.Instant CREATED_DATE, java.time.Instant MODIFIED_DATE) {
     this.ID = ID;
     this.KID = KID;
     this.DNAME = DNAME;
@@ -239,45 +239,45 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
   }
 
   /**
-   * Creates a new Department RecordBuilder.
-   * @return A new Department RecordBuilder
+   * Creates a new DEPARTMENT RecordBuilder.
+   * @return A new DEPARTMENT RecordBuilder
    */
-  public static com.citi.schema.Department.Builder newBuilder() {
-    return new com.citi.schema.Department.Builder();
+  public static com.citi.schema.DEPARTMENT.Builder newBuilder() {
+    return new com.citi.schema.DEPARTMENT.Builder();
   }
 
   /**
-   * Creates a new Department RecordBuilder by copying an existing Builder.
+   * Creates a new DEPARTMENT RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new Department RecordBuilder
+   * @return A new DEPARTMENT RecordBuilder
    */
-  public static com.citi.schema.Department.Builder newBuilder(com.citi.schema.Department.Builder other) {
+  public static com.citi.schema.DEPARTMENT.Builder newBuilder(com.citi.schema.DEPARTMENT.Builder other) {
     if (other == null) {
-      return new com.citi.schema.Department.Builder();
+      return new com.citi.schema.DEPARTMENT.Builder();
     } else {
-      return new com.citi.schema.Department.Builder(other);
+      return new com.citi.schema.DEPARTMENT.Builder(other);
     }
   }
 
   /**
-   * Creates a new Department RecordBuilder by copying an existing Department instance.
+   * Creates a new DEPARTMENT RecordBuilder by copying an existing DEPARTMENT instance.
    * @param other The existing instance to copy.
-   * @return A new Department RecordBuilder
+   * @return A new DEPARTMENT RecordBuilder
    */
-  public static com.citi.schema.Department.Builder newBuilder(com.citi.schema.Department other) {
+  public static com.citi.schema.DEPARTMENT.Builder newBuilder(com.citi.schema.DEPARTMENT other) {
     if (other == null) {
-      return new com.citi.schema.Department.Builder();
+      return new com.citi.schema.DEPARTMENT.Builder();
     } else {
-      return new com.citi.schema.Department.Builder(other);
+      return new com.citi.schema.DEPARTMENT.Builder(other);
     }
   }
 
   /**
-   * RecordBuilder for Department instances.
+   * RecordBuilder for DEPARTMENT instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Department>
-    implements org.apache.avro.data.RecordBuilder<Department> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<DEPARTMENT>
+    implements org.apache.avro.data.RecordBuilder<DEPARTMENT> {
 
     private java.lang.CharSequence ID;
     private long KID;
@@ -294,7 +294,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.citi.schema.Department.Builder other) {
+    private Builder(com.citi.schema.DEPARTMENT.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.ID)) {
         this.ID = data().deepCopy(fields()[0].schema(), other.ID);
@@ -319,10 +319,10 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
     }
 
     /**
-     * Creates a Builder by copying an existing Department instance
+     * Creates a Builder by copying an existing DEPARTMENT instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.citi.schema.Department other) {
+    private Builder(com.citi.schema.DEPARTMENT other) {
       super(SCHEMA$, MODEL$);
       if (isValidValue(fields()[0], other.ID)) {
         this.ID = data().deepCopy(fields()[0].schema(), other.ID);
@@ -360,7 +360,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'ID'.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder setID(java.lang.CharSequence value) {
+    public com.citi.schema.DEPARTMENT.Builder setID(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.ID = value;
       fieldSetFlags()[0] = true;
@@ -380,7 +380,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'ID' field.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder clearID() {
+    public com.citi.schema.DEPARTMENT.Builder clearID() {
       ID = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -400,7 +400,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'KID'.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder setKID(long value) {
+    public com.citi.schema.DEPARTMENT.Builder setKID(long value) {
       validate(fields()[1], value);
       this.KID = value;
       fieldSetFlags()[1] = true;
@@ -420,7 +420,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'KID' field.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder clearKID() {
+    public com.citi.schema.DEPARTMENT.Builder clearKID() {
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -439,7 +439,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'DNAME'.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder setDNAME(java.lang.CharSequence value) {
+    public com.citi.schema.DEPARTMENT.Builder setDNAME(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.DNAME = value;
       fieldSetFlags()[2] = true;
@@ -459,7 +459,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'DNAME' field.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder clearDNAME() {
+    public com.citi.schema.DEPARTMENT.Builder clearDNAME() {
       DNAME = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -479,7 +479,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'CREATED_DATE'.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder setCREATEDDATE(java.time.Instant value) {
+    public com.citi.schema.DEPARTMENT.Builder setCREATEDDATE(java.time.Instant value) {
       validate(fields()[3], value);
       this.CREATED_DATE = value.truncatedTo(java.time.temporal.ChronoUnit.MILLIS);
       fieldSetFlags()[3] = true;
@@ -499,7 +499,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'CREATED_DATE' field.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder clearCREATEDDATE() {
+    public com.citi.schema.DEPARTMENT.Builder clearCREATEDDATE() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -518,7 +518,7 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * @param value The value of 'MODIFIED_DATE'.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder setMODIFIEDDATE(java.time.Instant value) {
+    public com.citi.schema.DEPARTMENT.Builder setMODIFIEDDATE(java.time.Instant value) {
       validate(fields()[4], value);
       this.MODIFIED_DATE = value.truncatedTo(java.time.temporal.ChronoUnit.MILLIS);
       fieldSetFlags()[4] = true;
@@ -538,16 +538,16 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
       * Clears the value of the 'MODIFIED_DATE' field.
       * @return This builder.
       */
-    public com.citi.schema.Department.Builder clearMODIFIEDDATE() {
+    public com.citi.schema.DEPARTMENT.Builder clearMODIFIEDDATE() {
       fieldSetFlags()[4] = false;
       return this;
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public Department build() {
+    public DEPARTMENT build() {
       try {
-        Department record = new Department();
+        DEPARTMENT record = new DEPARTMENT();
         record.ID = fieldSetFlags()[0] ? this.ID : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.KID = fieldSetFlags()[1] ? this.KID : (java.lang.Long) defaultValue(fields()[1]);
         record.DNAME = fieldSetFlags()[2] ? this.DNAME : (java.lang.CharSequence) defaultValue(fields()[2]);
@@ -563,8 +563,8 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<Department>
-    WRITER$ = (org.apache.avro.io.DatumWriter<Department>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<DEPARTMENT>
+    WRITER$ = (org.apache.avro.io.DatumWriter<DEPARTMENT>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -572,8 +572,8 @@ public class Department extends org.apache.avro.specific.SpecificRecordBase impl
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<Department>
-    READER$ = (org.apache.avro.io.DatumReader<Department>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<DEPARTMENT>
+    READER$ = (org.apache.avro.io.DatumReader<DEPARTMENT>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {

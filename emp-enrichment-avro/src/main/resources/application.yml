@@ -7,17 +7,17 @@ spring:
         definition: enrichEmployee
       bindings:
         enrichEmployee-in-0:
-          destination: avro_EMPLOYEE
+          destination: test_EMPLOYEE
           contentType: application/*+avro
           consumer:
             use-native-decoding: false
         enrichEmployee-in-1:
-          destination: avro_DEPARTMENT
+          destination: test_DEPARTMENT
           contentType: application/*+avro
           consumer:
             use-native-decoding: false
         enrichEmployee-out-0:
-          destination: avro_RESULT
+          destination: test_RESULT
           contentType: application/*+avro
           producer:
             use-native-encoding: true

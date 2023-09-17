@@ -1,5 +1,5 @@
 {
-  "connect.name": "EMPLOYEE",
+  "connect.name": "RESULT",
   "namespace": "com.citi.schema",
   "fields": [
     {
@@ -7,15 +7,15 @@
       "type": "string"
     },
     {
-      "name": "KID",
-      "type": "long"
-    },
-    {
       "name": "DEPTID",
       "type": "string"
     },
     {
       "name": "ENAME",
+      "type": "string"
+    },
+    {
+      "name": "DNAME",
       "type": "string"
     },
     {
@@ -37,6 +37,6 @@
       }
     }
   ],
-  "name": "EMPLOYEE",
+  "name": "RESULT",
   "type": "record"
 }
