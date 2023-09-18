@@ -10,12 +10,12 @@ spring:
           destination: test_EMPLOYEE
           contentType: application/*+avro
           consumer:
-            use-native-decoding: false
+            use-native-decoding: true
         enrichEmployee-in-1:
           destination: test_DEPARTMENT
           contentType: application/*+avro
           consumer:
-            use-native-decoding: false
+            use-native-decoding: true
         enrichEmployee-out-0:
           destination: test_RESULT
           contentType: application/*+avro
@@ -38,21 +38,21 @@ spring:
           bindings:
             enrichEmployee-in-0:
               consumer:
-                keySerde: org.apache.kafka.common.serialization.Serdes$StringSerde
-                valueSerde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
                 configuration:
+                  key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+                  value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
                   specific.avro.reader: true
             enrichEmployee-in-1:
               consumer:
-                keySerde: org.apache.kafka.common.serialization.Serdes$StringSerde
-                valueSerde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
                 configuration:
+                  key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+                  value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
                   specific.avro.reader: true
             enrichEmployee-out-0:
               producer:
-                keySerde: org.apache.kafka.common.serialization.Serdes$StringSerde
-                valueSerde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
                 configuration:
+                  key.serializer: org.apache.kafka.common.serialization.StringSerializer
+                  value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
                   specific.avro.reader: true
                 useNativeEncoding: true
         binder:
